@@ -10,6 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var task: UITextField!
+    @IBAction func addTask(_ sender: AnyObject) {
+        
+        
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
