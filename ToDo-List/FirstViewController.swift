@@ -25,7 +25,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            items.remove(at: indexPath.row)
+            list.reloadData()
+            UserDefaults.standard.set(items, forKey: "Items")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
